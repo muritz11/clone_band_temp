@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/band_temp.css">
+    <title>My Band</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="">Home</a>
+        <a href="">Band</a>
+        <a href="#">Tour</a>
+        <a href="#">Contact</a>
+        <a href="#">More</a>
+    </div>
+
+    <div class="imgs" id="bg">
+        <div class="concerts">
+            <h1 id="h1">Los angeles</h1>
+            <p id="para">we had a good time</p>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="header">
+            <h1>THE BAND</h1>
+            <P class="grey">We love music</P>
+        </div>
+        <p>
+            We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+
+        <div class="fleximg">
+            <div class="f_img">
+                <p>Name</p>
+                <img src="images/bandmember.jpg" width="153.3" height="153.3" alt="">
+            </div>
+            
+            <div class="f_img">
+                <p>Name</p>
+                <img src="images/bandmember.jpg" width="153.3" height="153.3" alt="">
+            </div>
+            
+            <div class="f_img">
+                <p>Name</p>
+                <img src="images/bandmember.jpg" width="153.3" height="153.3" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="blackbg">
+        <div class="tour">
+            <div class="header">
+                <h1 class="white">TOUR DATES</h1>
+                <P class="grey">Remember to book your tickets</P>
+            </div>
+            <div class="tickets">
+                <p>September <span class="redbg">Sold out</span></p>
+                <hr>
+                <p>October <span class="redbg">Sold out</span></p>
+                <hr>
+                <p>November <span class="three">3</span></p>
+            </div>
+
+            <div class="fleximg clear">
+                <div class="f_img whiteBg">
+                    <img src="images/newyork.jpg" alt="" class="cityImages">
+                    <div class="cities">
+                        <h4>New York</h4>
+                        <p class="date">Fri 27 Nov 2016</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="btn" onclick="openModal()">Buy Tickets</button>
+                    </div>
+                </div>
+
+                <div class="f_img whiteBg">
+                    <img src="images/paris.jpg" alt="" class="cityImages">
+                    <div class="cities">
+                        <h4>New York</h4>
+                        <p class="date">Fri 27 Nov 2016</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="btn" onclick="openModal()">Buy Tickets</button>
+                    </div>
+                </div>
+
+                <div class="f_img whiteBg">
+                    <img src="images/sanfran.jpg" alt="" class="cityImages">
+                    <div class="cities">
+                        <h4>New York</h4>
+                        <p class="date">Fri 27 Nov 2016</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="btn" onclick="openModal()">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="header">
+            <h1>CONTACT</h1>
+            <P class="grey">Fan? drop a note</P>
+        </div>
+        <div class="fleximg contactDiv">
+            <div class="contact">
+                <p>Chicago, US</p>
+                <p>Phone: +00 151515</p>
+                <p>Email: mail@mail.com</p>
+            </div>
+            <div class="form">
+                <form action="">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email"><br>
+                    <span class="msg"><input type="text" name="message" placeholder="Message"></span><br>
+                    <button class="btn formbtn">SEND</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Powered by <span class="underline">Muritz</span></p>
+    </div>
+
+    <!--my modal box-->
+    <div class="modal" id="myModal">
+
+        <!--modal content-->
+        <div class="modal-content">
+            <div class="heading clear">
+                <div class="close">&times;</div>
+                <h1 class="clear">Tickets</h1>
+            </div>
+            <div class="mod-body">
+                <p>Tickets, $15 per person</p>
+                <input type="number" name="quantity" placeholder="How many?">
+                <p>Send To</p>
+                <input type="email" name="fanEmail" placeholder="Enter Email">
+                <button class="pay">Pay</button>
+                <button class="redbg closeBtn">Close</button>
+                <span class="ayudar">Need <a href="#">help?</a></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //xo we're trying to make an automatic bg img slideshow
+
+        var bg = document.getElementById('bg');
+        var city = document.getElementById('h1');
+        var para = document.getElementById('para');
+
+        //adding all that we'll need in an array
+        //the first containing url's to our bg imgs, the 2nd our cities and the 3rd our paragraphs/txts/comments
+        var myBg = [
+            ['url("images/la.jpg")', 'url("images/ny.jpg")', 'url("images/chicago.jpg")'],
+            ['los angeles', 'New york', 'Chicago'],
+            ['we had the best time', 'the atmosphere in New York is Lorem', 'Thank you chicago - A night we won\'t forget']
+        ];
+
+        //here,first we initialize our counter to zero
+        //then write a function that will first check when our counter bcums more than our array then sets it to zero
+        //else sets sets our bgimg, city and comment to value of d array depending on our counter(num) and increments the counter...
+        num = 0;
+        function changeBg() {
+
+            if (num >= myBg[1].length){
+                num = 0;
+            }
+            bg.style.backgroundImage = myBg[0][num];
+            city.innerHTML = myBg[1][num];
+            para.innerHTML = myBg[2][num];
+            num++;
+        }
+        setInterval(function () {
+            changeBg();
+        }, 3000);
+        //... normally we would need a for loop to loop tru the array but with d setInterval function does that for us
+        //a loop would just print the whole array for us, but with the function n the setInterval our variables(bg, city, para) holds only one particular value of the array for a given time
+
+        //modal js
+        //get our variables
+        modal = document.getElementById('myModal');
+        close = document.getElementsByClassName('close')[0];
+        clsBtn = document.getElementsByClassName('closeBtn')[0];
+
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        close.onclick = function () {
+            modal.style.display = 'none';
+        };
+
+        clsBtn.onclick = function () {
+            modal.style.display = 'none';
+        };
+
+        //for when user clicks anywhere outside d modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+
+
+
+    </script>
+</body>
+</html>

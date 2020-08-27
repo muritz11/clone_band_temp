@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: cursive;
+}
+
+.nav{
+    background: black;
+    padding: 15px 20px;
+    /* wen building nav bars its best not to add any padding or marg in d containing div */
+}
+.nav a{
+    color: honeydew;
+    text-decoration: none;
+    padding: 15px 10px;
+}
+.nav a:hover{
+    background: lightgray;
+    color: gray;
+}
+.imgs{
+    /*background: url('../images/la.jpg') no-repeat fixed center; since our js is changing it for us*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 42%;
+}
+.concerts, .header{
+    text-align: center;
+    color: white;
+}
+.concerts p{
+    padding: 10px;
+}
+.header{
+    color: black;
+    font-weight: lighter;
+    margin: 60px;
+    margin-bottom: 5px;
+}
+.header p, .date{
+    padding: 15px;
+    color: grey;
+}
+.about, .tour, .contact{
+    width: 65%;
+    margin: auto;
+    font-family: Calibri, "Agency FB", sans-serif;
+    font-size: 1.05em;
+}
+.fleximg{
+    display: flex;
+    margin: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+.f_img{
+    width: 60%;
+    margin: 10px;
+}
+.f_img p, .f_img h4, .f_img button{
+    padding: 10px;
+}
+.blackbg{
+    background: black;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+.white{
+    color: white;
+}
+.tickets{
+    background: white;
+    color: #757575;
+    margin: 15px;
+}
+.tickets p{
+    padding: 9px;
+}
+.redbg{
+    background: #F44336;
+    color: white;
+    padding: 3px 7px;
+    font-size: 0.9em;
+    margin-left: 30px;
+}
+.three{
+    background: black;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.cityImages{
+    width: 100%;
+    height: 183px;
+    background: black;
+}
+.whiteBg{
+    background: white;
+}
+.cities{
+    text-align: left;
+    padding: 10px;
+}
+.btn{
+    background: black;
+    color: white;
+    border: none;
+    width: 50%;
+    margin: 10px;
+}
+.cityImages:hover{
+    filter: brightness(50%);
+}
+.contactDiv{
+    margin-bottom: 300px;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.contactDiv div{
+    width: 50%;
+}
+.contactDiv input{
+    padding: 13px;
+    border: 1px solid #ddd;
+    width: 47%;
+    margin-right: 8px;
+}
+.msg input{
+    width: 97%;
+    margin-top: 10px;
+}
+.formbtn{
+    padding: 15px;
+    width: 20%;
+    float: right;
+}
+.btn:hover{
+    background: #CCCCCC;
+    color: black;
+}
+.footer{
+    padding: 80px;
+    background: #F6F6F6;
+    color: #aaa;
+    text-align: center;
+}
+.underline{
+    text-decoration: underline;
+    /*cursor: hand;*/
+}
+
+
+/*modal*/
+
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /*Black w/ opacity */
+}
+
+
+.modal-content{
+    background: white;
+    font-family: "Calibri Light", "Agency FB", sans-serif;
+    margin: 5% auto;
+    width: 80%;
+    position: relative;
+}
+.modal-content .heading{
+    background: #009688;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+.close{
+    /*float: right;*/
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 9px;
+}
+.mod-body{
+    padding: 20px;
+}
+.mod-body input, .pay{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0px;
+    border: 1px solid #ddd;
+}
+.pay{
+    background: #009688;
+    border: none;
+    color: white;
+    font-size: 17px;
+    padding: 25px;
+}
+.closeBtn{
+    margin-left: 0;
+    padding: 15px;
+    border: none;
+    margin-top: 15px;
+}
+.ayudar{
+    float: right;
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+.close:hover, .closeBtn:hover, .pay:hover {
+    background: #CCCCCC;
+    color: black;
+}
+.close:hover, .close:focus{
+    cursor: pointer;
+}
+.mod-body a{
+    color: #009688;
+}
+
+/*modal*/
+
+@media screen and (max-width: 800px) {
+    .fleximg{
+        display: block;
+    }
+    .f_img{
+        width: 100%;
+        margin: auto;
+        margin: 20px;
+    }
+    .form input{
+        width: 200%;
+        margin: 17px;
+    }
+    .formbtn{
+        width: 80%;
+        float: left;
+    }
+}
